@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Chatup</string>
+    <string name="app_name">ChatUP</string>
+    <string name="app_id">704702a67a1cfa</string>
+    <string name="api_key">31428915dd35affe412a7c4bb89dac1a5323f0b6</string>
 </resources>
