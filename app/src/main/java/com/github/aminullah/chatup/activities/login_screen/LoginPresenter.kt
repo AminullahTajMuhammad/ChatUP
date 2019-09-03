@@ -23,7 +23,7 @@ class LoginPresenter : LoginContract.Actions {
     override fun login(uid: String) {
         CometChat.login(uid, _views?.getApiKey().toString(), object : CometChat.CallbackListener<User>() {
             override fun onSuccess(p0: User?) {
-                Log.d("SUCCESS", "Login Success")
+                Log.d("SUCCESS", "Login Success with ${p0?.name}, ${p0?.uid}")
                 _views?.gotoUsersActivity()
             }
 

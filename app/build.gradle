@@ -42,6 +42,9 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.airbnb.android:lottie:2.8.0'
 
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+
     //comet chat pro
     implementation 'com.cometchat:pro-android-chat-sdk:1.8.+'
 

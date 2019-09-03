@@ -1,7 +1,6 @@
 package com.github.aminullah.chatup.activities.login_screen
 
 import android.os.Bundle
-import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.github.aminullah.chatup.R
 import com.github.aminullah.chatup.activities.users_screen.UsersActivity
@@ -43,28 +42,37 @@ class LoginActivity : AppCompatActivity(), LoginContract.Views {
             presenter.login(uid)
         }
 
-        btnIcon.setOnClickListener {
-            btnLogin.gone()
-            loginProgress.visible()
-
-            Handler().postDelayed({
-                btnLogin.visible()
-                loginProgress.gone()
-                this.gotoActivityWithFinih(this, UsersActivity::class.java)
-
-            }, 3000)
-        }
-
-        btnText.setOnClickListener {
-            btnLogin.gone()
-            loginProgress.visible()
-
-            Handler().postDelayed({
-                btnLogin.visible()
-                loginProgress.gone()
-                this.gotoActivityWithFinih(this, UsersActivity::class.java)
-            }, 3000)
-        }
+//        btnIcon.setOnClickListener {
+//            btnLogin.gone()
+//            loginProgress.visible()
+//
+//            val uid = edtEmail.text.toString()
+//
+//            if(uid.isEmpty()) {
+//                edtEmail.error = "Please fill this field"
+//                btnLogin.visible()
+//                loginProgress.gone()
+//                return@setOnClickListener
+//            }
+//
+//            presenter.login(uid)
+//        }
+//
+//        btnText.setOnClickListener {
+//            btnLogin.gone()
+//            loginProgress.visible()
+//
+//            val uid = edtEmail.text.toString()
+//
+//            if(uid.isEmpty()) {
+//                edtEmail.error = "Please fill this field"
+//                btnLogin.visible()
+//                loginProgress.gone()
+//                return@setOnClickListener
+//            }
+//
+//            presenter.login(uid)
+//        }
     }
 
     override fun gotoUsersActivity() {
