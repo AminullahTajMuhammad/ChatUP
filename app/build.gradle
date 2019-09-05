@@ -14,6 +14,14 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     buildTypes {
         release {
@@ -31,8 +39,15 @@ dependencies {
 
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
-    implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
+    implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.airbnb.android:lottie:2.8.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+
+    //comet chat pro
+    implementation 'com.cometchat:pro-android-chat-sdk:1.8.+'
+
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
