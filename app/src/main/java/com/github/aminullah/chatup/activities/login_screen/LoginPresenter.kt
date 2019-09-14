@@ -28,7 +28,7 @@ class LoginPresenter : LoginContract.Actions {
             }
 
             override fun onError(p0: CometChatException?) {
-                Log.d("ERROR", p0?.stackTrace.toString())
+                Log.d("ERROR", p0?.message)
             }
 
         })

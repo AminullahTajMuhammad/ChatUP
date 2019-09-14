@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.aminullah.chatup">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".application.ChatUpApp"
@@ -12,8 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="com.github.aminullah.chatup.activities.users_screen.UserActivity"></activity>
+
         <activity android:name=".activities.porfile_screen.ProfileActivity" />
-        <activity android:name=".activities.users_screen.UsersActivity" />
 
         <activity
             android:name=".activities.login_screen.LoginActivity"
@@ -28,7 +29,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".MainActivity" />
+
     </application>
 
 </manifest>
